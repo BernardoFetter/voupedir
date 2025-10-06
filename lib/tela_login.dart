@@ -39,7 +39,7 @@ class TelaLogin extends StatelessWidget{
               SizedBox(height: 20),
               ElevatedButton(onPressed: () async {
 
-                final sucesso = await UsuarioDAO.autenticar(usuarioController.text, usuarioController.text);
+                final sucesso = await UsuarioDAO.autenticar(usuarioController.text, senhaController.text);
 
                 if(sucesso){
                   Navigator.push(context,
