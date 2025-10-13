@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:voupedir/banco/restaurante_dao.dart';
+import 'package:voupedir/banco/restaurante_DAO.dart';
 import 'tela_cad_restaurante.dart';
 
 class TelaHome extends StatefulWidget {
@@ -31,8 +31,11 @@ Future <void> carregaRestaurante() async{
             title: const Text("Lista de Restaurantes"),
           actions: [
             IconButton(onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context) => TelaCadRestaurante()));
-            }, icon: Icon (Icons.add))
+             var t = Navigator.push(context, MaterialPageRoute(builder: (context) => TelaCadRestaurante()));
+
+             if(t == true ||)
+            },
+                icon: Icon (Icons.add))
           ],
         ),
         body: Padding (padding: const EdgeInsets.all(10),
@@ -95,6 +98,10 @@ Future <void> carregaRestaurante() async{
 
 
 }
+
+
+
+
 
 
 
